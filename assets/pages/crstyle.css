@@ -1,0 +1,168 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+    }
+    
+    ::-webkit-scrollbar-thumb{
+    background: #624bd3;
+    border-radius: 10px;
+    }
+
+.creative-container{
+    background-color: #14121F;
+    color: white;
+}
+
+.creative-container h1{
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 10px 0 20px;
+    color: #d8c395;
+}
+
+nav img{
+    height: 25px;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
+nav p{
+    visibility: hidden;
+}
+
+nav h1{
+    font-size: 25px;
+}
+
+.bottom-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.bottom-nav p{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.content{
+    height: auto;
+}
+
+.slash{
+    margin: 0 5px;
+}
+
+.blogs{
+    color: #6D57E0;
+}
+
+.bottom-nav p:hover{
+    text-decoration: underline;
+    /* color: rgb(230, 225, 225) !important; */
+    /* text-decoration-color: #d8c395; */
+}
+
+/* initial display none to all content */
+
+html{
+    background-color: #14121F;
+}
+
+/* adjustments on initial render */
+
+.sk-medium-publication-feed-container{
+    background-color: #14121F;
+}
+
+.medium-publication-feed-root-container{
+    display: none;
+}
+
+/* medium_publication_content{
+    background-color: red !important;
+} */
+
+.mfp-close{
+    color: white;
+}
+
+.content{
+    padding: 30px;
+}
+
+.sk-read-more-btn button{
+    display: none;
+}
+
+@media (max-width: 768px){
+
+    nav img{
+        align-items: center;
+        padding-bottom: 0;
+        height: 15px;
+    }
+
+    .m-none{
+        display: none;
+    }    
+
+    .poemsContent{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.poemsContent{
+    margin: 0px auto;
+    columns: 4;
+    column-gap: 20px;
+}
+
+.hidden{
+    display: none;
+}
+
+.poem1{
+    /* flex: 0 0 calc(25vw); */
+    border: 2px solid #6D57E0;
+    border-radius: 12px;
+    padding: 15px;
+    height: auto;
+    width: auto;
+    margin-bottom: 20px;
+    break-inside: avoid;
+}
+
+.poem1 p{
+    padding: 5px 0;
+}
+
+.author{
+    text-align: right;
+    color: #f7da9d;
+}
+
+.blogsContent , .quotesContent{
+    height: 46vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quotesContent{
+    display: none;
+}
