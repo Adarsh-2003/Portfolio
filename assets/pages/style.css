@@ -802,11 +802,12 @@ textarea { resize: none; }
   .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    /* grid-column-gap: -20px; */
+    grid-gap: 40px;
+    width: 100vw;
+    place-items: center;
     justify-content: center;
     margin-top: 20px;
-    margin-left: 180px;
+    padding: 0 100px;
   }
 
   .card{
