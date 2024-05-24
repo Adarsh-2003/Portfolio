@@ -313,7 +313,7 @@ nav ul li:hover > ul {
   display: grid;
   grid-template-columns: max-content;
   row-gap: 1rem;
-  transform: translateX(-4.4rem);
+  transform: translateX(-2.4rem);
 }
 
 
@@ -425,6 +425,7 @@ nav ul li:hover > ul {
 
     .home_img img {
         height: 240px;
+        margin-left: 30px;
       }
 
       .contactBtn{
