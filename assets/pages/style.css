@@ -313,7 +313,7 @@ nav ul li:hover > ul {
   display: grid;
   grid-template-columns: max-content;
   row-gap: 1rem;
-  transform: translateX(-2.4rem);
+  transform: translateX(-4.4rem);
 }
 
 
