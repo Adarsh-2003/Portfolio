@@ -461,6 +461,15 @@ nav ul li:hover > ul {
     /* border: 2px solid red; */
 }
 
+.chess a:hover{
+  cursor: pointer;
+}
+
+.chess a{
+  text-decoration: none;
+  color: #81B64C;
+}
+
 .photo img{
   border-radius: 22px;
   height: 350px;
@@ -472,7 +481,6 @@ nav ul li:hover > ul {
 }
 
 .about-desc{
-    cursor: help !important;
     font-size: 16.35px;
     color: white;
     margin-left: 40px;
