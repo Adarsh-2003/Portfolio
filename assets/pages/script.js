@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
   }, 1800);
   });
 
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 function cb(response) {
   document.getElementById('visits').innerText = response.value;
 }
