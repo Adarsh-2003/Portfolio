@@ -6,12 +6,13 @@
 This repository contains the source code for my portfolio website. It showcases my projects, qualifications, experience, and more.
 
 
-
-https://github.com/adarshgupta-2003/Portfolio/assets/158209002/fd20975b-633e-457d-8e04-5eb969540a6f
-
+https://github.com/user-attachments/assets/337fb16c-b94d-4712-8601-a6cb8bc2fe33
 
 
-https://github.com/adarshgupta-2003/Portfolio/assets/158209002/4d1f8855-eaaa-4cec-9572-1116e58dbba8
+
+https://github.com/user-attachments/assets/1c93ee1b-cab8-4612-a0b2-333b05db8e44
+
+
 
 
 ## Features
