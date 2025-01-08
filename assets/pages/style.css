@@ -433,6 +433,7 @@ nav ul li:hover > ul {
       }
 
     .home-desc h1 {
+        margin-top: 20px;
         font-size: 30px;
         text-align: center;
     
@@ -465,6 +466,12 @@ nav ul li:hover > ul {
     text-align: center;
 }
 
+.poems a{
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(248, 187, 74);
+}
+
 /* .about-title h1{
   margin-top: 25px;
 } */
@@ -481,7 +488,8 @@ nav ul li:hover > ul {
 }
 
 .chess a{
-  text-decoration: none;
+  text-decoration: underline;
+  cursor: pointer;
   color: #81B64C;
 }
 
