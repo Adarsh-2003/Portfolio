@@ -157,7 +157,7 @@ html{
 }
 
 .blogsContent , .quotesContent{
-    height: 46vh;
+    /* height: 46vh; */
     display: flex;
     justify-content: center;
     align-items: center;

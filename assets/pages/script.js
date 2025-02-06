@@ -119,10 +119,8 @@ if (currentTime >= 5 && currentTime < 12) {
   greet.innerText = "Good morning !";
 } else if (currentTime >= 12 && currentTime < 18) {
   greet.innerText = "Good afternoon !";
-} else if (currentTime >= 18 && currentTime < 20) {
-  aboutGreet.innerText = "Good evening";
 } else {
-  greet.innerText = "Good night !";
+  aboutGreet.innerText = "Good evening";
 }
 
 // browser detection
