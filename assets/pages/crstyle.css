@@ -4,14 +4,27 @@
     box-sizing: border-box;
 }
 
+body {
+    cursor: url('/assets/images/mc-sword.png'),auto;
+  }
+
+
 ::-webkit-scrollbar{
     width: 7px;
-    }
+}
     
-    ::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb{
     background: #624bd3;
     border-radius: 10px;
-    }
+}
+
+::-moz-selection { /* Code for Firefox */
+    background: #7964e4;
+  }
+  
+::selection {
+    background: #7964e4;
+  }
 
 .creative-container{
     background-color: #14121F;
@@ -161,8 +174,109 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .quotesContent{
     display: none;
+}
+
+.sub-blog{
+    width: 80vw;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #624bd3;
+}
+
+.sub-blog a{
+    display: flex;
+    flex-direction: row;
+}
+
+.blog-image img{
+    height: 150px;
+    /* border-radius: 15px; */
+}
+
+.blog-date{
+    display: flex;
+    justify-content: end;
+}
+
+.blog-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 20px;
+}
+
+.blog-title{
+    color: #d8c395;
+}
+
+.sub-blog a{
+    all: unset; 
+    text-decoration: none; 
+    color: inherit; 
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 768px){
+    .sub-blog a{
+        flex-direction: column;
+    }
+
+    .blog-image{
+        display: flex;
+        justify-content: center;
+    }
+
+    .sub-blog{
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    .blog-title h2{
+        font-size: 15px;
+        font-weight: 700;
+        padding: 10px 0;
+    }
+
+    .blog-desc{
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    .blog-sub-desc{
+        font-size: 12px;
+    }
+
+    .blog-image img{
+        width: 90vw;
+    }
+
+
+}
+
+@media (max-width: 365px){
+    .blog-image img {
+        width: 70vw;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .blog-image img{
+        width: auto;
+    }
+    .sub-blog a{
+        flex-direction: row;
+    }
+
+    .blog-desc{
+        padding-left: 20px;
+    }
 }

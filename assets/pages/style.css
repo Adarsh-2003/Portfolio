@@ -33,6 +33,10 @@
     background: #7964e4;
   }
 
+  /* body{
+    cursor: url('/assets/images/mc-sword.png'),auto;
+  } */
+
 body, .hero{
     background-color: #14121F;
 }
@@ -1562,6 +1566,7 @@ footer{
 }
 
 /* Tablet Media Queries (768px - 1024px) */
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .home_img img {
     height: 30vh;
