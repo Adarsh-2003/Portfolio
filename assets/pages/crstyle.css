@@ -196,7 +196,8 @@ html{
 
 .blog-image img{
     height: 150px;
-    /* border-radius: 15px; */
+    width: 20vw;
+    border-radius: 10px;
 }
 
 .blog-date{
@@ -222,6 +223,10 @@ html{
     cursor: pointer;
     display: flex;
     flex-direction: row;
+}
+
+.blog-date{
+    margin-top: 10px;
 }
 
 @media (max-width: 768px){
