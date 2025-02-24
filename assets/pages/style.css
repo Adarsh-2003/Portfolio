@@ -611,10 +611,6 @@ textarea { resize: none; }
         align-items: center;
     }
 
-    .about-2nd-holder .photo{
-        display: none;
-    }
-
     .about-desc{
         margin-left: 0;
     }
@@ -987,6 +983,11 @@ body{
 }
 
 @media (max-width: 768px) {
+
+  .about-2nd-holder .photo{
+    display: none;
+}
+
   .card-container {
       /* grid-template-columns: repeat(1, 1fr); */
       display: flex;
