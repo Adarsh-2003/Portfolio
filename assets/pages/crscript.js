@@ -8,7 +8,7 @@ var quotesContent = document.querySelector('.quotesContent');
 
 
 function poemClick(){
-    poems.style.color= '#6D57E0';
+    poems.style.color= '#BF956A';
     blogs.style.color= 'white';
     quotes.style.color= 'white';
 
@@ -27,7 +27,7 @@ function poemClick(){
 
 function blogClick(){
     poems.style.color= 'white';
-    blogs.style.color= '#6D57E0';
+    blogs.style.color= '#BF956A';
     quotes.style.color= 'white';
 
     blogsContent.style.display= 'flex';
@@ -39,7 +39,7 @@ function blogClick(){
 function quoteClick(){
     poems.style.color= 'white';
     blogs.style.color= 'white';
-    quotes.style.color= '#6D57E0';
+    quotes.style.color= '#BF956A';
 
     blogsContent.style.display= 'none';
     // poemsContent.style.display= 'none';
