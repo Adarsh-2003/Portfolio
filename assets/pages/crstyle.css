@@ -6,33 +6,28 @@
 
 body {
     cursor: url('/assets/images/mc-sword.png'),auto;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('/assets/images/mc_blackhole.gif');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
+  }
+
 
 ::-webkit-scrollbar{
     width: 7px;
-    background: black;
 }
     
 ::-webkit-scrollbar-thumb{
-    background: #BF956A;
+    background: #624bd3;
     border-radius: 10px;
 }
 
 ::-moz-selection { /* Code for Firefox */
-    background: #BF956A;
+    background: #7964e4;
   }
   
 ::selection {
-    background: #BF956A;
+    background: #7964e4;
   }
 
 .creative-container{
-    /* background-color: #14121F; */
+    background-color: #14121F;
     color: white;
 }
 
@@ -75,6 +70,7 @@ nav h1{
     cursor: pointer;
 }
 
+
 .content{
     height: auto;
 }
@@ -84,7 +80,7 @@ nav h1{
 }
 
 .blogs{
-    color: #BF956A;
+    color: #6D57E0;
 }
 
 .bottom-nav p:hover{
@@ -93,6 +89,29 @@ nav h1{
     /* text-decoration-color: #d8c395; */
 }
 
+/* initial display none to all content */
+
+html{
+    background-color: #14121F;
+}
+
+/* adjustments on initial render */
+
+.sk-medium-publication-feed-container{
+    background-color: #14121F;
+}
+
+.medium-publication-feed-root-container{
+    display: none;
+}
+
+/* medium_publication_content{
+    background-color: red !important;
+} */
+
+.mfp-close{
+    color: white;
+}
 
 .content{
     padding: 30px;
@@ -132,7 +151,7 @@ nav h1{
 
 .poem1{
     /* flex: 0 0 calc(25vw); */
-    border: 2px solid #BF956A;
+    border: 2px solid #6D57E0;
     border-radius: 12px;
     padding: 15px;
     height: auto;
@@ -167,7 +186,7 @@ nav h1{
     width: 80vw;
     padding: 25px;
     border-radius: 15px;
-    border: 2px solid #BF956A;
+    border: 2px solid #624bd3;
 }
 
 .sub-blog a{

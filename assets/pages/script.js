@@ -35,9 +35,9 @@ function qualClick(){
     const expIcon = document.querySelector('.expcolor');
 
 
-    qualIcon.style.color= '#BF956A';
+    qualIcon.style.color= '#6D57E0';
     expIcon.style.color= 'white';
-    qualText.style.color= '#BF956A';
+    qualText.style.color= '#6D57E0';
     expText.style.color= 'white';
 
     expBody.style.display= 'none';
@@ -57,9 +57,9 @@ function expClick(){
     expBody.style.display= 'block';
 
     qualIcon.style.color= 'white';
-    expIcon.style.color= '#BF956A';
+    expIcon.style.color= '#6D57E0';
     qualText.style.color= 'white';
-    expText.style.color= '#BF956A';
+    expText.style.color= '#6D57E0';
 }
 
 // Typing Animation using Typed JS
@@ -131,27 +131,3 @@ if (navigator.brave) {
 if (navigator.userAgent.indexOf('Firefox') > -1) {
 document.querySelector('.hitcounter').style.display = 'none';
 }
-
-// Add scroll event listener for navbar background
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('nav');
-    const aboutSection = document.querySelector('.about');
-    
-    if (!nav || !aboutSection) {
-        console.error('Nav or About section not found');
-        return;
-    }
-    
-    const aboutPosition = aboutSection.getBoundingClientRect().top + window.scrollY;
-    console.log('Current scroll:', window.scrollY);
-    console.log('About position:', aboutPosition);
-    
-    if (window.scrollY >= aboutPosition - 100) {
-        nav.classList.add('scrolled');
-        console.log('Added scrolled class');
-    } else {
-        nav.classList.remove('scrolled');
-        console.log('Removed scrolled class');
-    }
-});
-console.log("madarchod");
