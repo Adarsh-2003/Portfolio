@@ -64,7 +64,7 @@ function expClick(){
 
 // Typing Animation using Typed JS
 var typed = new Typed(".type", {
-    strings: ["Data Engineering", "Data Analysis", "Machine Learning", "Data Structures" ],
+    strings: ["Data Engineering", "Data Analysis", "Machine Learning" ],
     smartBackspace: true,
     startDelay: 1000,
     typeSpeed: 50,
