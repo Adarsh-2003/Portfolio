@@ -818,9 +818,95 @@ textarea { resize: none; }
     }
   }
 
+  /* d-projects */
+
+  .d-projects h1{
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+  }
+
+  .d-project-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .d-project-container{
+    /* background-color: #81B64C; */
+    display: flex;
+    color: white;
+    height: auto;
+    width: 80vw;
+    padding: 25px;
+    border: 2px solid #5946b6;
+    border-radius: 22px;
+    margin: 10px 0;
+    background-color: black;
+  }
+
+  .d-project-image img{
+    /* height: 200px; */
+    width: 400px;
+    border-radius: 10px;
+  }
+
+  .d-project-techstack a, .d-project-techstack2 a{
+    background-color: #7964e4;
+    padding: 8px 10px;
+    border-radius : 10px;
+    margin: 0 3px;
+  }
+
+  .d-project-techstack2{
+    margin: 7px 0;
+  }
+
+  .d-project-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    padding-left: 20px;
+  }
+
+  .d-project-actions .dp-btn a{
+    text-decoration: none;
+    color: white;
+    border: 2px solid #5946b6;
+    padding: 8px 10px;
+    border-radius : 10px;
+    margin: 0 3px;
+    font-weight: 700;
+  }
+
+  .d-project-sub-desc h4{
+    font-weight: 500;
+    color: rgb(212, 212, 212);
+  }
+
+  .d-project-actions button{
+    border: none;
+    background-color: transparent;
+  }
+
+  .d-project-actions a:hover{
+    background-color: #7964e4;
+    color: black;
+    font-weight: 700;
+    
+  }
+
+  .d-project-actions button i{
+    font-size: 18px;
+  }
+
   /* myprojects */
 
   .projects{
+    display: none;
     height: auto;
     width: 100vw;
     overflow: hidden;
@@ -944,7 +1030,20 @@ body{
   scroll-margin: 130px;
 }
 
+#d-projects{
+  scroll-margin: 130px;
+}
+
 @media (max-width: 768px) {
+
+  .projects{
+    display: block;
+  }
+
+  .d-projects{
+    display: none;
+  }
+
   .card-container {
       /* grid-template-columns: repeat(1, 1fr); */
       display: flex;
@@ -1040,6 +1139,13 @@ body{
 .right{
   margin-left: 30px;
 }
+
+/* .contact-button button:hover{
+  background-color: #7964e4;
+  background-color: white;
+  color: #7964e4;
+  font-weight: 700;
+} */
 
 .right form{
   display: flex;

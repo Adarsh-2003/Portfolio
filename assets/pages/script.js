@@ -131,3 +131,12 @@ if (navigator.brave) {
 if (navigator.userAgent.indexOf('Firefox') > -1) {
 document.querySelector('.hitcounter').style.display = 'none';
 }
+
+const img = document.getElementById('hitcounter-img');
+const countercontainer = document.getElementById('hitcounter');
+
+img.onerror = function () {
+  countercontainer.style.display= 'none';
+  console.log("is an error");
+  
+};

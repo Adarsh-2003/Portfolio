@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 <link rel="shortcut icon" href="./assets/images/moi.svg">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="(min-width: 768px)" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
 
     <div id="loading-logo">
@@ -36,6 +37,7 @@
       </div>
 
 <div id="content" class="hidden">
+    <!-------------------------- Mobile Navbar Section----------------------------->
     <div class="mob-nav-popup">
 
         <ul>
@@ -51,7 +53,7 @@
 
 
                 <li><a href="#myprojects" onclick="closeSideBar()">Projects</a></li>
-                        <li><a href="./creative.html" onclick="closeSideBar()">Creative Stuffs</a></li>
+                <li><a href="./creative.html" onclick="closeSideBar()">Creative Stuffs</a></li>
                 <li><a href="#contact" onclick="closeSideBar()">Contact</a></li>
             </div>
 
@@ -60,7 +62,7 @@
 
     <div class="main-container" id="home">
 
-        <!--------------------------Navbar Section----------------------------->
+        <!-------------------------- Desktop Navbar Section----------------------------->
 
         <nav>
             <div class="desktop-nav">
@@ -75,7 +77,7 @@
                             <img src="./assets/images/arrow-down.png" alt="">
                         </a>
                         <ul class="highindex">
-                            <li><a href="#myprojects">MyProjects</a></li>
+                            <li><a href="#d-projects">MyProjects</a></li>
                             <li><a href="/creative.html">Creative Stuffs</a></li>
                         </ul>
                         </li>
@@ -267,7 +269,165 @@
             </div>
         </div>
 
-        <!---------------------------Project Section-------------------------->
+        <!---------------------------Desktop Project Section-------------------------->
+
+        <div class="d-projects" id="d-projects">
+            <h1>My Projects</h1>
+
+            <div class="d-project-wrapper">
+
+
+                <div class="d-project-container">
+                    <div class="d-project-image">
+                        <img src="./assets/gifs/twl.gif" alt="Video was mogged">
+                    </div>
+                    <div class="d-project-desc">
+                        <div class="d-project-title">
+                            <h2>Limitless Translate</h2>
+                        </div>
+                        <div class="d-project-sub-desc">
+                            <h4>Ever felt restricted by the 5000-character limitation while translating text? That’s where Limitless Translate comes in. It lets you translate texts longer than 5000 characters in one go by utilising in-built google translate.</h4>
+                        </div>
+                        <div class="d-project-techstack">
+                            <a>Html</a>
+                            <a>CSS</a>
+                            <a>JS</a>
+                            <a>Blob</a>
+                        </div>
+                        <div class="d-project-actions">
+                            <button class="dp-btn source-code"><a href="https://github.com/Adarsh-2003/Limitless-Translate" target="_blank">Source Code  <i class="uil uil-github-alt"></i></a></button>
+                            <button class="dp-btn live-demo"><a href="https://limitless-translate.vercel.app/" target="_blank">Live Demo  <i class="uil uil-external-link-alt"></i> </a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-project-container">
+                    <div class="d-project-image">
+                        <img src="./assets/gifs/walle.gif" alt="Video was mogged">
+                    </div>
+                    <div class="d-project-desc">
+                        <div class="d-project-title">
+                            <h2>Wall-E Assistant</h2>
+                        </div>
+                        <div class="d-project-sub-desc">
+                            <h4>Developed Wall-E , A small-scale assistant, capable of running applications present on your system , send mails and carry out google searches on the console itself.</h4>
+                        </div>
+                        <div class="d-project-techstack">
+                            <a>Html</a>
+                            <a>CSS</a>
+                            <a>JS</a>
+                            <a>Blob</a>
+                        </div>
+                        <div class="d-project-actions">
+                            <button class="dp-btn source-code"><a href="https://github.com/Adarsh-2003/Wall-E-Assistant" target="_blank">Source Code <i class="uil uil-github-alt"></i></a></button>
+                            <button class="dp-btn live-demo"><a href="https://www.youtube.com/watch?v=ZAj6F7ucrU4" target="_blank">Live Demo <i class="uil uil-external-link-alt"></i></a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-project-container">
+                    <div class="d-project-image">
+                        <img src="./assets/gifs/bi.gif" alt="Video was mogged">
+                    </div>
+                    <div class="d-project-desc">
+                        <div class="d-project-title">
+                            <h2>Luxora Grands Analysise</h2>
+                        </div>
+                        <div class="d-project-sub-desc">
+                            <h4>Developed an interactive Power BI dashboard for Luxora Grands, a five-star hotel chain, to analyze booking trends, revenue performance, and customer behavior.</h4>
+                        </div>
+                        <div class="d-project-techstack">
+                            <a>Power BI</a>
+                            <a>Data Cleaning</a>
+                        </div>
+                        <div class="d-project-actions">
+                            <button class="dp-btn source-code"><a href="https://github.com/Adarsh-2003/Luxora-Grands-Analysis-PowerBI" target="_blank">Source Code <i class="uil uil-github-alt"></i></a></button>
+                            <button class="dp-btn live-demo"><a href="https://app.powerbi.com/view?r=eyJrIjoiZjBlNzExZWItNGU5OC00MWJmLThiYjItZDgzODJmZmJlZTk4IiwidCI6ImY3MzMyM2NlLTkxMWYtNGQ1MS1iMzdhLTFhMjdiMDBiNWM2ZCJ9&pageName=4b28ded05b69e2d78a2b" target="_blank">Live Demo <i class="uil uil-external-link-alt"></i></a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-project-container">
+                    <div class="d-project-image">
+                        <img src="./assets/gifs/ml.gif" alt="Video was mogged">
+                    </div>
+                    <div class="d-project-desc">
+                        <div class="d-project-title">
+                            <h2>ML Algorithms</h2>
+                        </div>
+                        <div class="d-project-sub-desc">
+                            <h4>A repository of me practicing few Machine-Learning-Algorithms. Jupyter Notebook environment was used while coding , consisting of 6 algorithms yet.</h4>
+                        </div>
+                        <div class="d-project-techstack">
+                            <a>Python</a>
+                            <a>Numpy</a>
+                            <a>Pandas</a>
+                            <a>Matplotlib</a>
+                            <a>Scikit-learn</a>
+                        </div>
+
+                        <!-- <div class="d-project-techstack2">
+                            
+                        </div> -->
+
+                        <div class="d-project-actions">
+                            <button class="dp-btn source-code"><a href="https://github.com/Adarsh-2003/Machine-Learning-Algorithms" target="_blank">Source Code <i class="uil uil-github-alt"></i></a></button>
+                            <button class="dp-btn live-demo"><a href="https://github.com/Adarsh-2003/Machine-Learning-Algorithms/blob/main/01_Simple%20Linear%20Regression/01_simple-linear-regression.ipynb" target="_blank">Live Demo <i class="uil uil-external-link-alt"></i></a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-project-container">
+                    <div class="d-project-image">
+                        <img src="./assets/gifs/dg.gif" alt="Video was mogged">
+                    </div>
+                    <div class="d-project-desc">
+                        <div class="d-project-title">
+                            <h2>DG-Services</h2>
+                        </div>
+                        <div class="d-project-sub-desc">
+                            <h4>Developed a content-driven website for DG Services, a home appliance repair business, showcasing products, services, and enhancing online presence.</h4>
+                        </div>
+                        <div class="d-project-techstack">
+                            <a>Html</a>
+                            <a>CSS</a>
+                            <a>JS</a>
+                        </div>
+                        <div class="d-project-actions">
+                            <button class="dp-btn source-code"><a href="https://github.com/Adarsh-2003/DG-Services" target="_blank">Source Code <i class="uil uil-github-alt"></i></a></button>
+                            <button class="dp-btn live-demo"><a href="https://dg-services.vercel.app/" target="_blank">Live Demo <i class="uil uil-external-link-alt"></i></a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-project-container">
+                    <div class="d-project-image">
+                        <img src="./assets/gifs/twr.gif" alt="Video was mogged">
+                    </div>
+                    <div class="d-project-desc">
+                        <div class="d-project-title">
+                            <h2>TwoWheelsOnRent</h2>
+                        </div>
+                        <div class="d-project-sub-desc">
+                            <h4>Developed bicycle rental website, Teaming up with my colleague partner for UI expertise where I've meticulously coded the frontend and backend,  developing it with precision and collaboration.</h4>
+                        </div>
+                        <div class="d-project-techstack">
+                            <a>Html</a>
+                            <a>CSS</a>
+                            <a>JS</a>
+                            <a>Firebase</a>
+                        </div>
+                        <div class="d-project-actions">
+                            <button class="dp-btn source-code"><a href="https://github.com/Adarsh-2003/Two-Wheels-On-Rent" target="_blank">Source Code <i class="uil uil-github-alt"></i></a></button>
+                            <button class="dp-btn live-demo"><a href="https://two-wheels-on-rent.vercel.app/" target="_blank">Live Demo <i class="uil uil-external-link-alt"></i></a></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!---------------------------Mobile Project Section-------------------------->
 
         <div class="projects" id="myprojects">
             <h1>My Projects</h1>
@@ -285,7 +445,7 @@
                         </div>
 
                         <div class="action-buttons">
-                            <button class="p-btn source-code"><a href="https://github.com/Adarsh-2003/Limitless-Translate" target="_blank">Source Code</a></button>
+                            <button class="p-btn source-code"><a href="https://github.com/Adarsh-2003/Limitless-Translate" target="_blank">Source Code </a></button>
                             <button class="p-btn live demo"><a href="https://limitless-translate.vercel.app/" target="_blank">Live Demo</a></button>
                         </div>
 
@@ -571,11 +731,17 @@
 
                 <!-- hitwebcounter.com thank you -->
 
-                <div class="hitcounter">
+                <div class="hitcounter" id="hitcounter">
                     <p>Visit count :&nbsp;</p>
                     <a href="https://www.hitwebcounter.com" target="_blank">
-                        <img src="https://hitwebcounter.com/counter/counter.php?page=12273939&style=0010&nbdigits=5&type=ip&initCount=0" title="Counter Widget" alt="100"   border="0" />
-                    </a> 
+                        <img src="https://hitwebcounter.com/counter/counter.php?page=20157230&style=0010&nbdigits=5&type=ip&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" />
+                    </a>
+                </div>
+
+                <div id="ad-detector" style="display: none;">
+                    <script>
+                        // This script block is here just for detection purposes.
+                    </script>
                 </div>
 
 
@@ -586,6 +752,7 @@
     <script src="dist/typed.js"></script>
     <script src="/dist/kursor.js"></script>
     <script src="/assets/pages/script.js"></script>
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer media="(min-width: 768px)"></script>
     <script>
         setTimeout(function() {
