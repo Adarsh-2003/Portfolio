@@ -120,7 +120,7 @@ if (currentTime >= 5 && currentTime < 12) {
 } else if (currentTime >= 12 && currentTime < 18) {
   greet.innerText = "Good afternoon !";
 } else {
-  aboutGreet.innerText = "Good evening";
+  greet.innerText = "Good evening !";
 }
 
 // browser detection
