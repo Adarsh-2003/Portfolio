@@ -531,6 +531,11 @@ nav ul li:hover > ul {
 
 textarea { resize: none; }
 
+.github-calendar-container{
+  /* border: white 1px solid; */
+  height: auto;
+  overflow: hidden;
+}
 
 @media screen and (max-width: 767px){
 
