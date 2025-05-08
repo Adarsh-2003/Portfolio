@@ -121,7 +121,7 @@ if (currentTime >= 5 && currentTime < 12) {
   greet.innerText = "Good afternoon !";
 } else {
   greet.innerText = "Good evening !";
-}
+}       
 
 // browser detection
 if (navigator.brave) { 
