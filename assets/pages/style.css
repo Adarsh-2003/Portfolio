@@ -465,6 +465,7 @@ nav ul li:hover > ul {
     height: auto;
     width: 100vw;
     scroll-margin: 100px;
+    margin-top: 30px;
 }
 
 .about-title{
@@ -848,7 +849,7 @@ textarea { resize: none; }
     padding: 25px;
     border: 2px solid #5946b6;
     border-radius: 22px;
-    margin: 10px 0;
+    margin: 13px 0;
     background-color: black;
   }
 
@@ -863,6 +864,10 @@ textarea { resize: none; }
     padding: 8px 10px;
     border-radius : 10px;
     margin: 0 3px;
+  }
+
+  .d-project-techstack{
+    cursor: pointer;
   }
 
   .d-project-techstack2{
