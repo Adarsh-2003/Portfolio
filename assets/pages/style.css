@@ -1719,6 +1719,10 @@ footer{
   margin-bottom: 40px;
 }
 
+.threedmodel model-viewer{
+  width: auto;
+}
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
