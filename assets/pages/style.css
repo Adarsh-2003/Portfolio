@@ -96,6 +96,13 @@ nav{
     font-size: 40px;
 }
 
+.name a{
+  text-decoration: none;
+  font-family: "Protest Riot", sans-serif;
+  color: white;
+  /* font-size: 1.5rem; */
+}
+
 .mob-nav-popup{
     display: none;
 }
@@ -123,6 +130,9 @@ nav{
     .mobile-nav .name {
         font-size: 30px;
         cursor: pointer;
+        text-decoration: none;
+        font-family: "Protest Riot", sans-serif;
+        color: white;
     }
 
     .menu img{

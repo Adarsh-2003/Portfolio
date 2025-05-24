@@ -43,6 +43,10 @@ function qualClick(){
     expBody.style.display= 'none';
     qualBody.style.display= 'block';
 
+  setTimeout(() => {
+    AOS.refresh();
+  }, 100);
+
 }
 
 function expClick(){
@@ -60,7 +64,13 @@ function expClick(){
     expIcon.style.color= '#6D57E0';
     qualText.style.color= 'white';
     expText.style.color= '#6D57E0';
+
+    setTimeout(() => {
+    AOS.refresh();
+  }, 100);
 }
+
+
 
 // Typing Animation using Typed JS
 var typed = new Typed(".type", {
