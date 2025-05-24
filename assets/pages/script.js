@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
       document.getElementById("loading-logo").style.display = "none";
       document.getElementById("content").classList.remove("hidden");
-  }, 1800);
+  }, 500);
   });
 
 document.getElementById('currentYear').textContent = new Date().getFullYear();
