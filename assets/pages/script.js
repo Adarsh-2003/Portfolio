@@ -76,10 +76,10 @@ function expClick(){
 var typed = new Typed(".type", {
     strings: [ "Data Analysis", "DevOps", "Data Engineering" ],
     smartBackspace: true,
-    startDelay: 1000,
-    typeSpeed: 50,
+    startDelay: 500,
+    typeSpeed: 20,
     backDelay: 1000,
-    backSpeed: 60,
+    backSpeed: 20,
     loop: true,
   });
 

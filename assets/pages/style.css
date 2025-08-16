@@ -644,13 +644,17 @@ textarea { resize: none; }
 }
 
 .exp-body{
-    display: none;
+
     margin-top: 40px;
 }
 
 .exp-body img{
     height: 210px;
     margin-left: 36vw;
+}
+
+.exp, .expcolor{
+  color: #6D57E0;
 }
 
 .qual-body{
@@ -662,7 +666,7 @@ textarea { resize: none; }
 }
 
 .qualcolor, .qual{
-    color: #6D57E0;
+    color: white;
 }
 
 .qualcolor, .expcolor{
@@ -1866,4 +1870,9 @@ filter: invert(1);
   height: 100vh;
 }
 
+}
+
+.default_prob{
+  text-decoration: underline;
+  color: white;
 }
