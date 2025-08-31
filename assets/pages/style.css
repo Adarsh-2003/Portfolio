@@ -658,6 +658,7 @@ textarea { resize: none; }
 }
 
 .qual-body{
+  display: none;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -693,6 +694,7 @@ textarea { resize: none; }
   .timeline ul{
     padding:0;
     margin:0;
+
   }
   .timeline ul li{
     list-style:none;
