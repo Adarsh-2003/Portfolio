@@ -1,0 +1,81 @@
+:root {
+  /* Typography */
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans",
+    "Liberation Sans", sans-serif;
+
+  /* Dark background */
+  --bg-0: #000105;
+  --bg-1: #000815;
+
+  /* Text */
+  --text-0: rgba(245, 250, 255, 0.96);
+  --text-1: rgba(245, 250, 255, 0.78);
+  --text-2: rgba(245, 250, 255, 0.58);
+
+  /* Ice blue accent */
+  --accent-0: #27d5dc;
+  --accent-1: #36edf5;
+  --accent-2: #21f4ee;
+  --accent-3: rgba(33, 244, 238, 0.22);
+
+  /* Effects */
+  --glass-bg: rgba(10, 16, 28, 0.42);
+  --glass-border: rgba(39, 213, 220, 0.18);
+  --glass-border-2: rgba(255, 255, 255, 0.12);
+  --shadow-1: 0 18px 40px rgba(0, 0, 0, 0.45);
+
+  /* Spacing scale — compact */
+  --space-1: 3px;
+  --space-2: 6px;
+  --space-3: 10px;
+  --space-4: 13px;
+  --space-5: 16px;
+  --space-6: 20px;
+  --space-7: 26px;
+  --space-8: 32px;
+  --space-9: 44px;
+  --space-10: 58px;
+
+  /* Border radius scale */
+  --radius-1: 8px;
+  --radius-2: 12px;
+  --radius-3: 18px;
+  --radius-4: 26px;
+
+  /* Container — compact scale (~80% of original) */
+  --container-max: 960px;
+  --container-gutter: 20px;
+
+  /* Typography scale — compact for natural 100% zoom feel */
+  --fs-0: 10px;
+  --fs-1: 11px;
+  --fs-2: 13px;
+  --fs-3: 14px;
+  --fs-4: 18px;
+  --fs-5: 22px;
+  --fs-6: 30px;
+  --fs-7: 43px;
+  --fs-8: 54px;
+
+  /* Unified page background */
+  --site-bg-base: #030810;
+  --site-bg-glow-1: rgba(39, 213, 220, 0.085);
+  --site-bg-glow-2: rgba(33, 244, 238, 0.045);
+
+  --lh-1: 1.2;
+  --lh-2: 1.35;
+  --lh-3: 1.55;
+
+  /* Animation */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 160ms;
+  --duration-med: 320ms;
+  --duration-slow: 700ms;
+
+  /* Breakpoints */
+  --bp-sm: 640px;
+  --bp-md: 900px;
+  --bp-lg: 1200px;
+}
+

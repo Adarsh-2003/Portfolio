@@ -1,0 +1,34 @@
+/* Responsive utilities + breakpoint adjustments. */
+
+@media (max-width: 1020px) {
+  :root {
+    --container-gutter: 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --container-gutter: 12px;
+  }
+  .hide-mobile {
+    display: none;
+  }
+  .show-mobile {
+    display: block;
+  }
+  .btn {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .link,
+  .hover-lift,
+  .reveal {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+

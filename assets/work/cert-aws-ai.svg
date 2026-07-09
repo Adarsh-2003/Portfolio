@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <circle cx="60" cy="60" r="54" fill="#232f3e"/>
+  <circle cx="60" cy="60" r="48" fill="none" stroke="#ff9900" stroke-width="3"/>
+  <text x="60" y="52" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="14" font-weight="700">aws</text>
+  <text x="60" y="72" text-anchor="middle" fill="#ff9900" font-family="Arial,sans-serif" font-size="9" font-weight="600">certified</text>
+  <path d="M36 82h48" stroke="#ff9900" stroke-width="1.5"/>
+  <text x="60" y="94" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="7">AI Practitioner</text>
+</svg>
