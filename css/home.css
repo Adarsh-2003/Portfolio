@@ -35,7 +35,7 @@
   content: "";
   width: 28px;
   height: 2px;
-  background: linear-gradient(90deg, rgba(39, 213, 220, 0.15), rgba(39, 213, 220, 0.95));
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.15), rgba(var(--accent-rgb), 0.95));
   border-radius: 999px;
 }
 
@@ -50,7 +50,7 @@
 
 .hero-title .ice-accent {
   color: var(--accent-1);
-  text-shadow: 0 0 20px rgba(39, 213, 220, 0.22);
+  text-shadow: 0 0 20px rgba(var(--accent-rgb), 0.22);
 }
 
 .hero-subtitle {
@@ -79,14 +79,54 @@
 
 .hero-cta-row {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+  max-width: 520px;
 }
 
-.btn .btn-icon {
-  width: 12px;
-  height: 12px;
-  display: inline-block;
+.hero-cta-row .btn {
+  flex: 1;
+  min-height: 48px;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  background: transparent;
+  box-shadow: none;
+}
+
+.hero-cta-row .btn--primary {
+  color: var(--accent-1);
+  border: 1px solid rgba(var(--accent-rgb), 0.42);
+  box-shadow: inset 0 1px 0 rgba(var(--accent-rgb), 0.38);
+}
+
+.hero-cta-row .btn--primary:hover {
+  color: var(--accent-2);
+  border-color: rgba(var(--accent-rgb), 0.58);
+  background: rgba(var(--accent-rgb), 0.06);
+  box-shadow: inset 0 1px 0 rgba(var(--accent-rgb), 0.5), 0 0 20px var(--accent-glow);
+}
+
+.hero-cta-row .btn--secondary {
+  color: var(--neutral-btn);
+  border: 1px solid var(--neutral-btn-border);
+}
+
+.hero-cta-row .btn--secondary:hover {
+  color: #fff;
+  border-color: rgba(245, 247, 250, 0.48);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: none;
+}
+
+.hero-cta-row .btn-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.95;
 }
 
 .hero-social {
@@ -110,8 +150,8 @@
 }
 
 .social-icon-btn:hover {
-  border-color: rgba(39, 213, 220, 0.3);
-  background: rgba(39, 213, 220, 0.06);
+  border-color: rgba(var(--accent-rgb), 0.3);
+  background: rgba(var(--accent-rgb), 0.06);
 }
 
 .hero-right {
@@ -135,22 +175,22 @@
 
 .orbit-arc {
   fill: none;
-  stroke: rgba(39, 213, 220, 0.16);
+  stroke: rgba(var(--accent-rgb), 0.16);
   stroke-width: 1;
 }
 
 .orbit-arc--bright {
-  stroke: rgba(39, 213, 220, 0.24);
+  stroke: rgba(var(--accent-rgb), 0.24);
 }
 
 .orbit-dot {
-  fill: rgba(39, 213, 220, 0.75);
-  filter: drop-shadow(0 0 6px rgba(39, 213, 220, 0.2));
+  fill: rgba(var(--accent-rgb), 0.75);
+  filter: drop-shadow(0 0 6px rgba(var(--accent-rgb), 0.2));
 }
 
 .orbit-dot--secondary {
-  fill: rgba(39, 213, 220, 0.38);
-  filter: drop-shadow(0 0 4px rgba(39, 213, 220, 0.14));
+  fill: rgba(var(--accent-rgb), 0.38);
+  filter: drop-shadow(0 0 4px rgba(var(--accent-rgb), 0.14));
 }
 
 .orbit-ring {
@@ -159,7 +199,7 @@
 }
 
 .orbit-ring--inner {
-  stroke: rgba(39, 213, 220, 0.1);
+  stroke: rgba(var(--accent-rgb), 0.1);
 }
 
 .orbit-ring--outer {

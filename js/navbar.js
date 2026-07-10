@@ -18,6 +18,14 @@
       toggleBtn.setAttribute("aria-expanded", expanded ? "true" : "false");
       menuEl.dataset.open = expanded ? "true" : "false";
       menuEl.setAttribute("aria-hidden", expanded ? "false" : "true");
+
+      const backdrop = document.querySelector("[data-nav-backdrop]");
+      if (backdrop) {
+        backdrop.dataset.open = expanded ? "true" : "false";
+        backdrop.setAttribute("aria-hidden", expanded ? "false" : "true");
+      }
+
+      document.body.classList.toggle("nav-menu-open", expanded);
     }
 
     toggleBtn.addEventListener("click", () => {

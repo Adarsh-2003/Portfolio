@@ -12,15 +12,21 @@
   --text-1: rgba(245, 250, 255, 0.78);
   --text-2: rgba(245, 250, 255, 0.58);
 
-  /* Ice blue accent */
-  --accent-0: #27d5dc;
-  --accent-1: #36edf5;
-  --accent-2: #21f4ee;
-  --accent-3: rgba(33, 244, 238, 0.22);
+  /* Ice blue accent — sky-400 family (not cyan / emerald) */
+  --accent-rgb: 56, 189, 248;
+  --accent-0: #38bdf8;
+  --accent-1: #60d5fa;
+  --accent-2: #7dd3fc;
+  --accent-3: rgba(56, 189, 248, 0.22);
+  --accent-glow: rgba(56, 189, 248, 0.18);
+
+  /* Neutral secondary (hero ABOUT ME button) */
+  --neutral-btn: rgba(245, 247, 250, 0.9);
+  --neutral-btn-border: rgba(245, 247, 250, 0.32);
 
   /* Effects */
   --glass-bg: rgba(10, 16, 28, 0.42);
-  --glass-border: rgba(39, 213, 220, 0.18);
+  --glass-border: rgba(56, 189, 248, 0.18);
   --glass-border-2: rgba(255, 255, 255, 0.12);
   --shadow-1: 0 18px 40px rgba(0, 0, 0, 0.45);
 
@@ -59,8 +65,8 @@
 
   /* Unified page background */
   --site-bg-base: #030810;
-  --site-bg-glow-1: rgba(39, 213, 220, 0.085);
-  --site-bg-glow-2: rgba(33, 244, 238, 0.045);
+  --site-bg-glow-1: rgba(56, 189, 248, 0.07);
+  --site-bg-glow-2: rgba(30, 58, 95, 0.04);
 
   --lh-1: 1.2;
   --lh-2: 1.35;
@@ -78,4 +84,3 @@
   --bp-md: 900px;
   --bp-lg: 1200px;
 }
-

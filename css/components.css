@@ -41,7 +41,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-2);
+  gap: var(--space-3);
   padding: 8px 13px;
   border-radius: 8px;
   font-weight: 600;
@@ -58,21 +58,21 @@
 }
 
 .btn:hover {
-  border-color: rgba(39, 213, 220, 0.32);
-  background: rgba(39, 213, 220, 0.08);
+  border-color: rgba(var(--accent-rgb), 0.32);
+  background: rgba(var(--accent-rgb), 0.08);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
 }
 
 .btn--primary {
-  border-color: rgba(39, 213, 220, 0.42);
-  background: rgba(39, 213, 220, 0.2);
+  border-color: rgba(var(--accent-rgb), 0.42);
+  background: rgba(var(--accent-rgb), 0.2);
   color: var(--text-0);
 }
 
 .btn--primary:hover {
-  border-color: rgba(39, 213, 220, 0.55);
-  background: rgba(39, 213, 220, 0.28);
-  box-shadow: 0 8px 20px rgba(39, 213, 220, 0.12);
+  border-color: rgba(var(--accent-rgb), 0.55);
+  background: rgba(var(--accent-rgb), 0.28);
+  box-shadow: 0 8px 20px var(--accent-glow);
 }
 
 .btn--secondary {
@@ -85,6 +85,21 @@
   border-color: rgba(255, 255, 255, 0.28);
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Lucide icon sizing */
+.btn-icon,
+.icon-inline {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  stroke-width: 1.75;
+}
+
+.btn-icon svg,
+.icon-inline svg {
+  width: 100%;
+  height: 100%;
 }
 
 .btn--ghost {
@@ -115,7 +130,7 @@
 }
 
 .hover-lift:hover {
-  border-color: rgba(39, 213, 220, 0.26);
+  border-color: rgba(var(--accent-rgb), 0.26);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 
@@ -126,8 +141,8 @@
   gap: var(--space-2);
   padding: 6px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(39, 213, 220, 0.18);
-  background: rgba(39, 213, 220, 0.06);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
+  background: rgba(var(--accent-rgb), 0.06);
   color: var(--text-1);
   font-size: var(--fs-1);
   letter-spacing: 0.02em;
@@ -135,8 +150,8 @@
 }
 
 .tag--accent {
-  border-color: rgba(39, 213, 220, 0.34);
-  background: rgba(39, 213, 220, 0.12);
+  border-color: rgba(var(--accent-rgb), 0.34);
+  background: rgba(var(--accent-rgb), 0.12);
   color: var(--accent-1);
 }
 

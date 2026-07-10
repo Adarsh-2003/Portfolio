@@ -62,9 +62,9 @@
   margin: 0 0 var(--space-6);
   padding: var(--space-5) var(--space-6);
   border: none;
-  border-left: 2px solid rgba(39, 213, 220, 0.35);
+  border-left: 2px solid rgba(var(--accent-rgb), 0.35);
   border-radius: 0 var(--radius-1) var(--radius-1) 0;
-  background: rgba(39, 213, 220, 0.05);
+  background: rgba(var(--accent-rgb), 0.05);
   position: relative;
 }
 
@@ -127,7 +127,7 @@
 }
 
 .archive-landing-card:hover {
-  border-color: rgba(39, 213, 220, 0.28);
+  border-color: rgba(var(--accent-rgb), 0.28);
   background: rgba(12, 18, 32, 0.62);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
   transform: translateY(-2px);
@@ -140,7 +140,7 @@
   width: 36px;
   height: 36px;
   border-radius: var(--radius-1);
-  background: rgba(39, 213, 220, 0.1);
+  background: rgba(var(--accent-rgb), 0.1);
   color: var(--accent-0);
 }
 
@@ -241,7 +241,7 @@
 
 .archive-sidebar__link.is-active {
   color: var(--text-0);
-  background: rgba(39, 213, 220, 0.12);
+  background: rgba(var(--accent-rgb), 0.12);
 }
 
 .archive-sidebar__quote {
@@ -311,7 +311,7 @@
 }
 
 .archive-sidebar__social a:hover {
-  border-color: rgba(39, 213, 220, 0.32);
+  border-color: rgba(var(--accent-rgb), 0.32);
   color: var(--accent-0);
 }
 
@@ -348,22 +348,24 @@
 }
 
 .archive-sword-btn:hover {
-  border-color: rgba(39, 213, 220, 0.32);
-  background: rgba(39, 213, 220, 0.1);
-  box-shadow: 0 0 16px rgba(39, 213, 220, 0.12);
+  border-color: rgba(var(--accent-rgb), 0.32);
+  background: rgba(var(--accent-rgb), 0.1);
+  box-shadow: 0 0 16px rgba(var(--accent-rgb), 0.12);
 }
 
 .archive-sword-btn.is-active {
-  border-color: rgba(94, 234, 212, 0.45);
-  background: rgba(94, 234, 212, 0.14);
-  box-shadow: 0 0 20px rgba(94, 234, 212, 0.2);
+  border-color: rgba(var(--accent-rgb), 0.45);
+  background: rgba(var(--accent-rgb), 0.14);
+  box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.2);
 }
 
 .archive-sword-btn__icon {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   image-rendering: pixelated;
+  image-rendering: crisp-edges;
   pointer-events: none;
+  object-fit: contain;
 }
 
 .archive-sword-btn__tooltip {
@@ -372,7 +374,7 @@
   right: 0;
   padding: 5px 10px;
   border-radius: var(--radius-1);
-  border: 1px solid rgba(39, 213, 220, 0.22);
+  border: 1px solid rgba(var(--accent-rgb), 0.22);
   background: rgba(10, 16, 28, 0.95);
   color: var(--text-1);
   font-size: var(--fs-0);
@@ -395,7 +397,7 @@
 
 .page--archive.archive--sword-cursor,
 .page--archive.archive--sword-cursor * {
-  cursor: url("../assets/archive/sword-cursor.svg") 2 2, crosshair !important;
+  cursor: url("../assets/archive/minecraft-sword.png") 2 2, crosshair !important;
 }
 
 .page--archive.archive--sword-cursor .archive-sword-btn {
@@ -426,7 +428,7 @@
 }
 
 .archive-back:hover {
-  border-color: rgba(39, 213, 220, 0.28);
+  border-color: rgba(var(--accent-rgb), 0.28);
   color: var(--accent-0);
 }
 
@@ -506,9 +508,9 @@
 
 .archive-poem-card:hover,
 .archive-poem-card:focus-visible {
-  border-color: rgba(39, 213, 220, 0.32);
+  border-color: rgba(var(--accent-rgb), 0.32);
   background: rgba(12, 18, 32, 0.58);
-  box-shadow: 0 0 0 1px rgba(39, 213, 220, 0.12);
+  box-shadow: 0 0 0 1px rgba(var(--accent-rgb), 0.12);
 }
 
 .archive-poem-card__bookmark {
@@ -578,7 +580,7 @@
 }
 
 .archive-blog-card:hover {
-  border-color: rgba(39, 213, 220, 0.26);
+  border-color: rgba(var(--accent-rgb), 0.26);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
   transform: translateY(-2px);
 }
@@ -606,8 +608,8 @@
 .archive-blog-card__category {
   padding: 3px 8px;
   border-radius: var(--radius-1);
-  border: 1px solid rgba(39, 213, 220, 0.28);
-  background: rgba(39, 213, 220, 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.28);
+  background: rgba(var(--accent-rgb), 0.1);
   color: var(--accent-0);
   font-size: var(--fs-0);
   font-weight: 600;
@@ -718,7 +720,7 @@
   width: min(420px, 92vw);
   z-index: 90;
   background: rgba(10, 16, 28, 0.96);
-  border-left: 1px solid rgba(39, 213, 220, 0.18);
+  border-left: 1px solid rgba(var(--accent-rgb), 0.18);
   box-shadow: -20px 0 60px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -755,7 +757,7 @@
 }
 
 .archive-poem-popup__close:hover {
-  border-color: rgba(39, 213, 220, 0.28);
+  border-color: rgba(var(--accent-rgb), 0.28);
   color: var(--accent-0);
 }
 
@@ -827,7 +829,7 @@
 }
 
 .archive-icon-btn:hover {
-  border-color: rgba(39, 213, 220, 0.28);
+  border-color: rgba(var(--accent-rgb), 0.28);
   color: var(--accent-0);
 }
 
@@ -881,7 +883,7 @@
 }
 
 .archive-photo-lightbox__close:hover {
-  border-color: rgba(39, 213, 220, 0.32);
+  border-color: rgba(var(--accent-rgb), 0.32);
   color: var(--accent-0);
 }
 
@@ -925,7 +927,7 @@
 }
 
 .archive-photo-lightbox__nav:hover {
-  border-color: rgba(39, 213, 220, 0.32);
+  border-color: rgba(var(--accent-rgb), 0.32);
   color: var(--accent-0);
 }
 

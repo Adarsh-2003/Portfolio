@@ -146,8 +146,8 @@
   margin-top: var(--space-2);
   padding: 3px 8px;
   border-radius: 999px;
-  border: 1px solid rgba(39, 213, 220, 0.34);
-  background: rgba(39, 213, 220, 0.08);
+  border: 1px solid rgba(var(--accent-rgb), 0.34);
+  background: rgba(var(--accent-rgb), 0.08);
   color: var(--accent-0);
   font-size: 9px;
   letter-spacing: 0.08em;
@@ -170,7 +170,7 @@
 
 .about-timeline-item--current .about-timeline-marker {
   background: var(--accent-0);
-  box-shadow: 0 0 0 4px rgba(39, 213, 220, 0.14), 0 0 14px rgba(39, 213, 220, 0.28);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.14), 0 0 14px rgba(var(--accent-rgb), 0.28);
 }
 
 .about-timeline-heading {
@@ -283,7 +283,7 @@
   height: 6px;
   border-radius: 999px;
   background: var(--accent-0);
-  box-shadow: 0 0 8px rgba(39, 213, 220, 0.35);
+  box-shadow: 0 0 8px rgba(var(--accent-rgb), 0.35);
 }
 
 /* Responsive */

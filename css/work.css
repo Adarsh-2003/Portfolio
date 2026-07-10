@@ -22,6 +22,10 @@
   padding-bottom: var(--space-8);
 }
 
+.work-certs .container {
+  width: min(1080px, calc(100% - 2 * var(--container-gutter)));
+}
+
 /* Section headers */
 .work-header {
   display: flex;
@@ -84,7 +88,7 @@
   height: 6px;
   border-radius: 999px;
   background: var(--accent-0);
-  box-shadow: 0 0 8px rgba(39, 213, 220, 0.35);
+  box-shadow: 0 0 8px rgba(var(--accent-rgb), 0.35);
   flex-shrink: 0;
 }
 
@@ -116,7 +120,7 @@
 }
 
 .work-project-card:hover {
-  border-color: rgba(39, 213, 220, 0.26);
+  border-color: rgba(var(--accent-rgb), 0.26);
   background: rgba(12, 18, 32, 0.58);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
@@ -157,7 +161,7 @@
 }
 
 .work-browser-chrome span:nth-child(3) {
-  background: rgba(39, 213, 220, 0.45);
+  background: rgba(var(--accent-rgb), 0.45);
 }
 
 .work-project-image {
@@ -257,60 +261,315 @@
   transform: translateX(3px);
 }
 
+/* Certifications section */
+.work-certs-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-7);
+  margin-bottom: var(--space-8);
+}
+
+.work-certs-header__main {
+  max-width: 520px;
+}
+
+.work-certs-title {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-4);
+  font-size: var(--fs-6);
+  line-height: var(--lh-1);
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  color: var(--text-0);
+}
+
+.work-certs-sparkle {
+  width: 18px;
+  height: 18px;
+  color: var(--accent-0);
+  flex-shrink: 0;
+}
+
+.work-certs-lead {
+  margin: 0;
+  color: var(--text-2);
+  font-size: var(--fs-2);
+  line-height: var(--lh-2);
+  max-width: 420px;
+}
+
+.work-certs-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-2);
+  border: 1px solid rgba(var(--accent-rgb), 0.22);
+  background: rgba(10, 16, 28, 0.42);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.work-certs-stats__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(var(--accent-rgb), 0.14);
+  color: var(--accent-0);
+}
+
+.work-certs-stats__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.work-certs-stats__count {
+  margin: 0 0 2px;
+  font-size: var(--fs-2);
+  font-weight: 700;
+  color: var(--text-0);
+  white-space: nowrap;
+}
+
+.work-certs-stats__tagline {
+  margin: 0;
+  font-size: var(--fs-0);
+  color: var(--text-2);
+  white-space: nowrap;
+}
+
 /* Certification grid */
 .work-certs-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: var(--space-4);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
 }
 
 .work-cert-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   gap: var(--space-3);
-  padding: var(--space-5) var(--space-3);
+  min-height: 248px;
+  padding: var(--space-5);
   border-radius: var(--radius-2);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(12, 18, 32, 0.45);
-  transition: border-color var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out),
-    background var(--duration-fast) var(--ease-out);
+  background: rgba(8, 12, 22, 0.52);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  overflow: hidden;
+  transition: border-color var(--duration-fast) var(--ease-out), box-shadow var(--duration-med) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out), background var(--duration-fast) var(--ease-out);
+}
+
+.work-cert-card::before,
+.work-cert-card::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: 0.55;
+  transition: opacity var(--duration-med) var(--ease-out);
+}
+
+.work-cert-card::before {
+  top: -60px;
+  left: -40px;
+}
+
+.work-cert-card::after {
+  bottom: -70px;
+  right: -30px;
+}
+
+.work-cert-card--blue {
+  --cert-accent: 0, 128, 255;
+  --cert-accent-hex: #0080ff;
+}
+
+.work-cert-card--purple {
+  --cert-accent: 168, 85, 247;
+  --cert-accent-hex: #a855f7;
+}
+
+.work-cert-card--cyan {
+  --cert-accent: 56, 189, 248;
+  --cert-accent-hex: #38bdf8;
+}
+
+.work-cert-card--orange {
+  --cert-accent: 245, 158, 11;
+  --cert-accent-hex: #f59e0b;
+}
+
+.work-cert-card--blue::before,
+.work-cert-card--blue::after,
+.work-cert-card--purple::before,
+.work-cert-card--purple::after,
+.work-cert-card--cyan::before,
+.work-cert-card--cyan::after,
+.work-cert-card--orange::before,
+.work-cert-card--orange::after {
+  background: radial-gradient(circle, rgba(var(--cert-accent), 0.35) 0%, transparent 68%);
 }
 
 .work-cert-card:hover {
-  border-color: rgba(39, 213, 220, 0.26);
-  background: rgba(12, 18, 32, 0.58);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+  border-color: rgba(var(--cert-accent), 0.42);
+  background: rgba(10, 16, 28, 0.62);
+  box-shadow: 0 0 0 1px rgba(var(--cert-accent), 0.12), 0 16px 40px rgba(0, 0, 0, 0.35),
+    0 0 32px rgba(var(--cert-accent), 0.12);
+  transform: translateY(-2px);
 }
 
-.work-cert-badge {
-  width: 64px;
-  height: 64px;
+.work-cert-card:hover::before,
+.work-cert-card:hover::after {
+  opacity: 0.85;
+}
+
+.work-cert-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.work-cert-logo {
+  height: 28px;
+  width: auto;
   object-fit: contain;
 }
 
-.work-cert-issuer {
-  margin: 0;
-  font-size: var(--fs-0);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.work-cert-logo--square {
+  width: 28px;
+  height: 28px;
+}
+
+.work-cert-external {
+  width: 14px;
+  height: 14px;
   color: var(--text-2);
-  font-weight: 600;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: color var(--duration-fast) var(--ease-out), opacity var(--duration-fast) var(--ease-out);
+}
+
+.work-cert-card:hover .work-cert-external {
+  color: var(--cert-accent-hex);
+  opacity: 1;
 }
 
 .work-cert-name {
   margin: 0;
-  font-size: var(--fs-1);
+  font-size: var(--fs-3);
   line-height: var(--lh-2);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-0);
 }
 
-.work-cert-year {
-  margin: auto 0 0;
+.work-cert-issuer {
+  margin: 0;
+  font-size: var(--fs-1);
+  font-weight: 600;
+  color: var(--cert-accent-hex);
+}
+
+.work-cert-dates {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
   font-size: var(--fs-0);
-  letter-spacing: 0.08em;
+  color: var(--text-2);
+  line-height: var(--lh-2);
+}
+
+.work-cert-id {
+  margin: 0;
+  font-size: var(--fs-0);
+  color: var(--text-2);
+  line-height: var(--lh-2);
+  word-break: break-all;
+}
+
+.work-cert-meta-icon {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  opacity: 0.75;
+}
+
+.work-cert-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-1) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-cert-skills li {
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: var(--fs-0);
+  color: var(--text-1);
+  white-space: nowrap;
+}
+
+.work-cert-skills__more {
+  color: var(--text-2);
+}
+
+.work-cert-verify {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-2);
+  font-size: var(--fs-1);
+  font-weight: 600;
+  color: var(--cert-accent-hex);
+  transition: gap var(--duration-fast) var(--ease-out);
+}
+
+.work-cert-card:hover .work-cert-verify {
+  gap: var(--space-3);
+}
+
+.work-cert-verify-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.work-certs-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.work-certs-footer__icon {
+  width: 16px;
+  height: 16px;
+  color: var(--accent-0);
+  flex-shrink: 0;
+}
+
+.work-certs-footer p {
+  margin: 0;
+  font-size: var(--fs-1);
   color: var(--text-2);
 }
 
@@ -326,8 +585,8 @@
   margin: 0 auto;
   padding: 8px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(39, 213, 220, 0.18);
-  background: rgba(39, 213, 220, 0.06);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
+  background: rgba(var(--accent-rgb), 0.06);
   color: var(--text-1);
   font-size: var(--fs-1);
   letter-spacing: 0.04em;
@@ -343,7 +602,7 @@
   height: 6px;
   border-radius: 999px;
   background: var(--accent-0);
-  box-shadow: 0 0 8px rgba(39, 213, 220, 0.35);
+  box-shadow: 0 0 8px rgba(var(--accent-rgb), 0.35);
 }
 
 /* Responsive */
@@ -367,8 +626,17 @@
     display: none;
   }
 
+  .work-certs-header {
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .work-certs-stats {
+    align-self: flex-start;
+  }
+
   .work-certs-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -386,7 +654,12 @@
   }
 
   .work-certs-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+  }
+
+  .work-certs-stats__count,
+  .work-certs-stats__tagline {
+    white-space: normal;
   }
 
   .work-project-card {
@@ -395,7 +668,7 @@
 }
 
 @media (max-width: 420px) {
-  .work-certs-grid {
-    grid-template-columns: 1fr;
+  .work-certs-stats {
+    width: 100%;
   }
 }

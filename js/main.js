@@ -37,6 +37,8 @@
           </span>
         </button>
 
+        <div class="nav-mobile-backdrop" data-nav-backdrop data-open="false" aria-hidden="true"></div>
+
         <div class="nav-mobile-drawer" id="nav-drawer" data-nav-menu aria-hidden="true" data-open="false">
           <div class="nav-drawer-inner">
             <div class="nav-drawer-links" role="menu" aria-label="Mobile navigation">
@@ -81,32 +83,19 @@
           <div class="social-row" aria-label="Social links">
             <!-- TODO: replace href with your real GitHub URL -->
             <a class="icon-btn" href="#" aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M15 22v-4a4 4 0 0 0-1-3v0a4 4 0 0 0 3-3c0-1.5-.5-2.5-1-3a3 3 0 0 0-2-.5 3 3 0 0 0-2 .5 3 3 0 0 0-2-.5 3 3 0 0 0-2 .5c-.5.5-1 1.5-1 3a4 4 0 0 0 3 3v0a4 4 0 0 0-1 3v4"/>
-              </svg>
+              <i data-lucide="github" class="icon-inline"></i>
             </a>
             <!-- TODO: replace href with your real LinkedIn URL -->
             <a class="icon-btn" href="#" aria-label="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6Z"/>
-                <path d="M2 9h4v12H2z"/>
-                <path d="M4 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
-              </svg>
+              <i data-lucide="linkedin" class="icon-inline"></i>
             </a>
             <!-- TODO: replace href with your real Medium URL -->
             <a class="icon-btn" href="#" aria-label="Medium">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 7l4 10 4-10 4 10 4-10"/>
-                <path d="M2 5h20"/>
-              </svg>
+              <i data-lucide="book-open" class="icon-inline"></i>
             </a>
             <!-- TODO: replace href with your real email link (if different from mailto below) -->
-            <a class="icon-btn" href="#" aria-label="Email">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 4h16v16H4z" opacity="0"/>
-                <path d="M4 6h16v12H4z"/>
-                <path d="M4 7l8 6 8-6"/>
-              </svg>
+            <a class="icon-btn" href="mailto:adarshgupta.work@gmail.com" aria-label="Email">
+              <i data-lucide="mail" class="icon-inline"></i>
             </a>
           </div>
         </div>
@@ -172,6 +161,10 @@
     if (typeof initNavbar === "function") initNavbar();
     if (typeof initAnimations === "function") initAnimations();
     if (typeof initArchive === "function") initArchive();
+
+    if (typeof window.Portfolio.initIcons === "function") {
+      window.Portfolio.initIcons();
+    }
   }
 
   if (document.readyState === "loading") {
