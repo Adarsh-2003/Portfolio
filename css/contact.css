@@ -136,6 +136,13 @@ a.contact-info-item:hover {
   flex-shrink: 0;
 }
 
+.nsvg svg {
+  width: 16px;
+  height: 13px;
+  color: var(--accent-0);
+  flex-shrink: 0;
+}
+
 .contact-social-btn:hover {
   border-color: rgba(var(--accent-rgb), 0.28);
   background: rgba(var(--accent-rgb), 0.08);
@@ -193,9 +200,54 @@ a.contact-info-item:hover {
   min-height: 120px;
 }
 
+.contact-form-status {
+  padding: 10px 12px;
+  border-radius: var(--radius-1);
+  font-size: var(--fs-1);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: var(--lh-2);
+  border: 1px solid transparent;
+}
+
+.contact-form-status--success {
+  color: var(--accent-1);
+  background: rgba(var(--accent-rgb), 0.08);
+  border-color: rgba(var(--accent-rgb), 0.28);
+}
+
+.contact-form-status--error {
+  color: rgba(255, 145, 145, 0.95);
+  background: rgba(255, 80, 80, 0.06);
+  border-color: rgba(255, 100, 100, 0.22);
+}
+
 .contact-submit {
   justify-self: start;
   margin-top: var(--space-2);
+}
+
+.contact-submit:disabled {
+  opacity: 0.72;
+  cursor: wait;
+}
+
+.contact-submit-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: var(--space-2);
+  border: 2px solid rgba(var(--accent-rgb), 0.25);
+  border-top-color: var(--accent-1);
+  border-radius: 999px;
+  animation: contact-spin 0.7s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes contact-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive */
