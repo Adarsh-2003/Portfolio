@@ -41,6 +41,9 @@
 
         <div class="nav-mobile-drawer" id="nav-drawer" data-nav-menu aria-hidden="true" data-open="false">
           <div class="nav-drawer-inner">
+            <div class="nav-drawer-header">
+              <button class="nav-drawer-close" type="button" data-nav-close aria-label="Close menu"></button>
+            </div>
             <div class="nav-drawer-links" role="menu" aria-label="Mobile navigation">
               <a class="nav-drawer-link" href="index.html" role="menuitem">
                 <span>HOME</span>
@@ -72,6 +75,11 @@
   function ensureFooter(footerEl) {
     if (!footerEl || footerEl.childElementCount > 0) return;
 
+    const links = (window.Portfolio && window.Portfolio.SOCIAL_LINKS) || {};
+    const github = links.github || "#";
+    const linkedin = links.linkedin || "#";
+    const email = links.email || "mailto:adarshgupta.contact@gmail.com";
+
     footerEl.innerHTML = `
       <div class="container">
         <div class="footer-bar">
@@ -81,19 +89,19 @@
           </div>
 
           <div class="footer-social" aria-label="Social links">
-            <a class="footer-social-link" href="#" aria-label="GitHub">
+            <a class="footer-social-link" href="${github}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 .297C5.373.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.083-.729.083-.729 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.775.42-1.305.763-1.605-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.467-2.382 1.235-3.222-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3.003-.404c1.018.005 2.044.137 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.233 1.913 1.233 3.222 0 4.61-2.807 5.624-5.48 5.921.431.372.816 1.103.816 2.222 0 1.606-.015 2.902-.015 3.297 0 .321.216.694.825.576C20.565 22.092 24 17.596 24 12.297 24 5.67 18.627.297 12 .297z"/>
               </svg>
             </a>
             <span class="footer-divider" aria-hidden="true"></span>
-            <a class="footer-social-link" href="#" aria-label="LinkedIn">
+            <a class="footer-social-link" href="${linkedin}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.85-3.037-1.852 0-2.135 1.445-2.135 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.604 0 4.268 2.372 4.268 5.455v6.286zM5.337 7.433a2.063 2.063 0 1 1 0-4.126 2.063 2.063 0 0 1 0 4.126zM7.119 20.452H3.555V9h3.564v11.452z"/>
               </svg>
             </a>
             <span class="footer-divider" aria-hidden="true"></span>
-            <a class="footer-social-link footer-social-link--stroke" href="mailto:adarshgupta.contact@gmail.com" aria-label="Email">
+            <a class="footer-social-link footer-social-link--stroke" href="${email}" aria-label="Email">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="3" y="5" width="18" height="14" rx="2"/>
                 <path d="M3 7l9 6 9-6"/>
@@ -115,6 +123,10 @@
 
     ensureNavbar(document.querySelector("#site-navbar"));
     ensureFooter(document.querySelector("#site-footer"));
+
+    if (typeof window.Portfolio.applySocialLinks === "function") {
+      window.Portfolio.applySocialLinks();
+    }
 
     if (typeof initNavbar === "function") initNavbar();
     if (typeof initAnimations === "function") initAnimations();

@@ -404,6 +404,17 @@
   cursor: pointer !important;
 }
 
+@media (max-width: 720px) {
+  .archive-sword-btn {
+    display: none !important;
+  }
+
+  .page--archive.archive--sword-cursor,
+  .page--archive.archive--sword-cursor * {
+    cursor: auto !important;
+  }
+}
+
 .archive-panel-header {
   display: flex;
   align-items: flex-start;

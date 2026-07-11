@@ -2,11 +2,25 @@
 
 .page--home .site-main {
   padding-top: 62px;
+  min-height: 100dvh;
+  box-sizing: border-box;
 }
 
 .hero {
   padding-block: 20px 32px;
   position: relative;
+}
+
+.page--home .hero {
+  min-height: calc(100dvh - 62px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 24px 32px;
+}
+
+.page--home .site-footer {
+  margin-top: 0;
 }
 
 .hero-inner {
@@ -207,6 +221,11 @@
 }
 
 @media (max-width: 980px) {
+  .page--home .hero {
+    min-height: calc(100dvh - 62px);
+    padding-block: 20px 28px;
+  }
+
   .hero-inner {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -217,7 +236,7 @@
   }
 
   .hero-left {
-    padding-top: 18px;
+    padding-top: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -250,6 +269,11 @@
 }
 
 @media (max-width: 560px) {
+  .page--home .hero {
+    min-height: calc(100dvh - 58px);
+    padding-block: 16px 24px;
+  }
+
   .hero-title {
     font-size: 38px;
   }

@@ -1,43 +1,83 @@
-/**
- * Google Apps Script — Contact form → Google Sheets
- *
- * Copy this entire file into Extensions → Apps Script on your spreadsheet.
- * See setup steps in the project README or contact page docs from your dev.
- */ 
+/*
+Paste this script into the 'Code.gs' tab in the Script Editor
+For a detailed explanation of this file, view 'form-script-commented.js'
+*/
 
-var sheetName = 'Sheet1'
-var scriptProp = PropertiesService.getScriptProperties()
+const scriptProp = PropertiesService.getScriptProperties()
 
-function initialSetup () {
-  var activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet()
-  scriptProp.setProperty('key', activeSpreadsheet.getId())
+function initialSetup() {
+	const activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet()
+	scriptProp.setProperty('key', activeSpreadsheet.getId())
 }
 
-function doPost (e) {
-  var lock = LockService.getScriptLock()
-  lock.tryLock(10000) 
+function sanitizeValue(value) {
+	if (typeof value !== 'string') return value
+	const triggers = ['=', '+', '-', '@']
+	if (triggers.some(t => value.startsWith(t))) {
+		return "'" + value
+	}
+	return value
+}
 
-  try {
-    var doc = SpreadsheetApp.openById(scriptProp.getProperty('key'))
-    var sheet = doc.getSheetByName(sheetName)
+// Uncomment and setup to get notified of new submissions
 
-    var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
-    var nextRow = sheet.getLastRow() + 1
+//function sendNewSubmissionEmailNotification(subject, body) {
+//	const recipient = 'INSERT_YOUR_EMAIL_HERE'
+//	const senderName = 'INSERT_YOUR_NAME_HERE'
 
-    var newRow = headers.map(function (header) {
-      return header === 'timestamp' ? new Date() : e.parameter[header]
-    })
+//	MailApp.sendEmail({
+//		to: recipient,
+//		subject: subject,
+//		htmlBody: body,
+//		name: senderName,
+//	})
+//}
 
-    sheet.getRange(nextRow, 1, nextRow, newRow.length).setValues([newRow])
+function doPost(e) {
+	const lock = LockService.getScriptLock()
+	lock.tryLock(10000)
 
-    return ContentService
-      .createTextOutput(JSON.stringify({ result: 'success', row: nextRow }))
-      .setMimeType(ContentService.MimeType.JSON)
-  } catch (err) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ result: 'error', error: String(err) }))
-      .setMimeType(ContentService.MimeType.JSON)
-  } finally {
-    lock.releaseLock()
-  }
+	try {
+		if (e.parameter.mobile_number && e.parameter.mobile_number !== '') {
+			return ContentService.createTextOutput(
+				JSON.stringify({ result: 'success', message: 'Bot detected' }),
+			).setMimeType(ContentService.MimeType.JSON)
+		}
+
+		const sheetName = e.parameter.sheet_name || 'Sheet1'
+		const doc = SpreadsheetApp.openById(scriptProp.getProperty('key'))
+		const sheet = doc.getSheetByName(sheetName)
+		const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
+		const nextRow = sheet.getLastRow() + 1
+
+		const newRow = headers.map(function (header) {
+			if (header === 'id') return Utilities.getUuid()
+			if (header === 'timestamp') return new Date()
+
+			const rawValue = e.parameter[header] || ''
+			return sanitizeValue(rawValue)
+		})
+
+		const newRange = sheet.getRange(nextRow, 1, nextRow, newRow.length)
+		newRange.setNumberFormat('@')
+		newRange.setValues([newRow])
+
+		//const emailSubject = 'New Form Submission'
+		//const emailBody = 'A new submission has been added to row ' + nextRow
+		//sendNewSubmissionEmailNotification(emailSubject, emailBody)
+
+		return ContentService.createTextOutput(
+			JSON.stringify({ result: 'success', row: nextRow }),
+		).setMimeType(ContentService.MimeType.JSON)
+	} catch (e) {
+		//const errorSubject = 'Error in Form Submission'
+		//const errorBody = 'Form submission error:\n' + e.toString()
+		//sendNewSubmissionEmailNotification(errorSubject, errorBody)
+
+		return ContentService.createTextOutput(
+			JSON.stringify({ result: 'error', error: e.toString() }),
+		).setMimeType(ContentService.MimeType.JSON)
+	} finally {
+		lock.releaseLock()
+	}
 }

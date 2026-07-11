@@ -201,13 +201,47 @@ a.contact-info-item:hover {
 }
 
 .contact-form-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
   padding: 10px 12px;
   border-radius: var(--radius-1);
   font-size: var(--fs-1);
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   line-height: var(--lh-2);
   border: 1px solid transparent;
+}
+
+.contact-form-status[hidden] {
+  display: none;
+}
+
+.contact-form-status:not([hidden]) {
+  animation: contact-status-in var(--duration-med) var(--ease-out);
+}
+
+.contact-form-status-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.contact-form-status-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes contact-status-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .contact-form-status--success {
@@ -264,7 +298,15 @@ a.contact-info-item:hover {
 
 @media (max-width: 480px) {
   .contact-socials-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .contact-social-btn {
+    width: auto;
+    flex: 0 0 auto;
+    padding: 10px 14px;
   }
 
   .contact-submit {

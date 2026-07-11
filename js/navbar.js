@@ -16,6 +16,7 @@
 
     function setExpanded(expanded) {
       toggleBtn.setAttribute("aria-expanded", expanded ? "true" : "false");
+      toggleBtn.setAttribute("aria-label", expanded ? "Close menu" : "Open menu");
       menuEl.dataset.open = expanded ? "true" : "false";
       menuEl.setAttribute("aria-hidden", expanded ? "false" : "true");
 
@@ -31,6 +32,22 @@
     toggleBtn.addEventListener("click", () => {
       const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
       setExpanded(!expanded);
+    });
+
+    const closeBtn = navbarEl.querySelector("[data-nav-close]");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => setExpanded(false));
+    }
+
+    const backdrop = document.querySelector("[data-nav-backdrop]");
+    if (backdrop) {
+      backdrop.addEventListener("click", () => setExpanded(false));
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && toggleBtn.getAttribute("aria-expanded") === "true") {
+        setExpanded(false);
+      }
     });
 
     // Close menu when a link is clicked.

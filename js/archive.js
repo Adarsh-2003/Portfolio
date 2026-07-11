@@ -145,7 +145,7 @@ How everything has its opposite How complex this universe is yet so composite
       date: "Apr 14, 2025",
       excerpt: "A practical walkthrough of designing automated test, build, and deploy workflows for production-grade applications.",
       image: "assets/archive/blog-devops.svg",
-      url: "https://medium.com/",
+      url: "https://medium.com/@gupta-adarsh",
     },
     {
       title: "AWS Architecture Patterns for Scalable Systems",
@@ -154,7 +154,7 @@ How everything has its opposite How complex this universe is yet so composite
       date: "Feb 3, 2025",
       excerpt: "Exploring fault-tolerant design, cost optimization, and service selection when building on AWS.",
       image: "assets/archive/blog-cloud.svg",
-      url: "https://medium.com/",
+      url: "https://medium.com/@gupta-adarsh",
     },
     {
       title: "From Raw Data to Insights with Modern ETL",
@@ -163,7 +163,7 @@ How everything has its opposite How complex this universe is yet so composite
       date: "Dec 18, 2024",
       excerpt: "How I approach data pipelines, cleaning workflows, and analytics dashboards for real-world problems.",
       image: "assets/archive/blog-data.svg",
-      url: "https://medium.com/",
+      url: "https://medium.com/@gupta-adarsh",
     },
   ];
 
@@ -407,7 +407,31 @@ How everything has its opposite How complex this universe is yet so composite
     const btn = $("#archive-sword-btn");
     if (!btn) return;
 
+    const mobileMq = window.matchMedia("(max-width: 720px)");
+
+    function resetSwordState() {
+      document.body.classList.remove("archive--sword-cursor");
+      btn.classList.remove("is-active");
+      btn.setAttribute("aria-pressed", "false");
+      btn.setAttribute("aria-label", "Get your sword");
+    }
+
+    function syncSwordForViewport() {
+      if (mobileMq.matches) {
+        resetSwordState();
+        btn.hidden = true;
+        return;
+      }
+
+      btn.hidden = false;
+    }
+
+    syncSwordForViewport();
+    mobileMq.addEventListener("change", syncSwordForViewport);
+
     btn.addEventListener("click", () => {
+      if (mobileMq.matches) return;
+
       const active = document.body.classList.toggle("archive--sword-cursor");
       btn.classList.toggle("is-active", active);
       btn.setAttribute("aria-pressed", active ? "true" : "false");
