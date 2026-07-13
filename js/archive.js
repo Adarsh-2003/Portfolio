@@ -507,10 +507,36 @@ How everything has its opposite How complex this universe is yet so composite
     }
   }
 
+  function formatCount(count, singular, plural) {
+    return `${count} ${count === 1 ? singular : plural}`;
+  }
+
+  function updateArchiveCounts() {
+    const counts = {
+      poems: { count: POEMS.length, singular: "Poem", plural: "Poems" },
+      blogs: { count: BLOGS.length, singular: "Blog", plural: "Blogs" },
+      photos: { count: PHOTOS.length, singular: "Photo", plural: "Photos" },
+    };
+
+    Object.entries(counts).forEach(([key, meta]) => {
+      const el = document.querySelector(`[data-archive-count="${key}"]`);
+      if (el) el.textContent = formatCount(meta.count, meta.singular, meta.plural);
+    });
+  }
+
+  function updateCurrentYear() {
+    const year = String(new Date().getFullYear());
+    document.querySelectorAll("[data-current-year]").forEach((el) => {
+      el.textContent = year;
+    });
+  }
+
   window.Portfolio.initArchive = function () {
     renderPoemCards();
     renderBlogCards();
     renderPhotoCards();
+    updateArchiveCounts();
+    updateCurrentYear();
     bindEvents();
     bindSwordToggle();
     closePoemPopup();
