@@ -2,7 +2,8 @@
 
 .page--home .site-main {
   padding-top: 62px;
-  min-height: 100dvh;
+  /* svh avoids mid-scroll height jumps when mobile browser chrome collapses */
+  min-height: 100svh;
   box-sizing: border-box;
 }
 
@@ -12,7 +13,7 @@
 }
 
 .page--home .hero {
-  min-height: calc(100dvh - 62px);
+  min-height: calc(100svh - 62px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -221,8 +222,12 @@
 }
 
 @media (max-width: 980px) {
+  .page--home .site-main {
+    min-height: 0;
+  }
+
   .page--home .hero {
-    min-height: calc(100dvh - 62px);
+    min-height: calc(100svh - 62px);
     padding-block: 20px 28px;
   }
 
@@ -270,7 +275,7 @@
 
 @media (max-width: 560px) {
   .page--home .hero {
-    min-height: calc(100dvh - 58px);
+    min-height: calc(100svh - 58px);
     padding-block: 16px 24px;
   }
 

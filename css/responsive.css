@@ -23,12 +23,23 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .btn,
   .link,
   .hover-lift,
   .reveal {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+/* Avoid fixed-bg scroll jank on mobile browsers */
+@media (max-width: 720px) {
+  html {
+    background-attachment: scroll;
   }
 }
 

@@ -744,8 +744,9 @@
   width: min(420px, 92vw);
   z-index: 90;
   background: rgba(10, 16, 28, 0.96);
-  border-left: 1px solid rgba(var(--accent-rgb), 0.18);
-  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(var(--accent-rgb), 0.42);
+  border-right: none;
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(var(--accent-rgb), 0.08);
   display: flex;
   flex-direction: column;
   animation: archive-slide-in var(--duration-med) var(--ease-out);
@@ -827,39 +828,6 @@
   background: transparent;
   border: none;
   padding: 0;
-}
-
-.archive-poem-popup__actions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: var(--space-6);
-  padding-top: var(--space-5);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.archive-icon-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: transparent;
-  color: var(--text-2);
-  cursor: pointer;
-  transition: border-color var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out);
-}
-
-.archive-icon-btn:hover {
-  border-color: rgba(var(--accent-rgb), 0.28);
-  color: var(--accent-0);
-}
-
-.archive-icon-btn svg {
-  width: 15px;
-  height: 15px;
 }
 
 /* ── Photo lightbox (centered) ── */
@@ -1082,6 +1050,9 @@
   .archive-poem-popup {
     width: 100%;
     top: 64px;
+    border: 1px solid rgba(var(--accent-rgb), 0.42);
+    border-bottom: none;
+    box-shadow: 0 -12px 48px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(var(--accent-rgb), 0.08);
   }
 }
 
