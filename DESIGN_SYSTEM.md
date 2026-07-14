@@ -13,7 +13,7 @@ This document describes the reusable design-system tokens and primitives used by
   - `--text-2`: `rgba(245, 250, 255, 0.58)`
 - Ice blue accent
   - `--accent-0`: `#27d5dc`
-  - `--accent-1`: `#36edf5`
+  - `--accent-1`: `#60D5FA`
   - `--accent-2`: `#21f4ee`
   - `--accent-3`: `rgba(33, 244, 238, 0.22)`
 - Glassmorphism surfaces
